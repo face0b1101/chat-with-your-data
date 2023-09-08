@@ -1,0 +1,75 @@
+[tool.poetry]
+name = "chat-with-your-data"
+version = "0.1.0"
+description = "Elasticsearch / LLM application to chat with your datasets. Forked from wrathagom/chat-with-your-data"
+authors = ["face0b1101 <6190957+face0b1101@users.noreply.github.com>"]
+maintainers = ["face0b1101 <6190957+face0b1101@users.noreply.github.com>"]
+readme = "README.md"
+homepage = "https://github.com/face0b1101/chat-with-your-data"
+repository = "https://github.com/face0b1101/chat-with-your-data"
+documentation = "https://github.com/face0b1101/chat-with-your-data"
+
+[tool.poetry.dependencies]
+python = ">=3.11, <3.13"
+python-decouple = "^3.6"
+Unipath = "^1.1"
+rich = "^12.5.1"
+numpy = "^1.25.2"
+openai = "^0.28.0"
+packaging = "^23.1"
+pandas = "^2.1.0"
+pillow = ">=7.1.0,<10"
+protobuf = "^4.24.3"
+pyarrow = "^13.0.0"
+pydeck = "^0.8.0"
+pygments = "^2.16.1"
+pympler = "^1.0.1"
+pyparsing = "^3.1.1"
+pyrsistent = "^0.19.3"
+python-dateutil = "^2.8.2"
+pytz = "^2023.3.post1"
+pytz-deprecation-shim = "^0.1.0.post0"
+requests = "^2.31.0"
+scipy = "^1.11.2"
+six = "^1.16.0"
+smmap = "^5.0.0"
+spicy = "^0.16.0"
+streamlit = "^1.26.0"
+tenacity = "^8.2.3"
+toml = "^0.10.2"
+toolz = "^0.12.0"
+tornado = "^6.3.3"
+tqdm = "^4.66.1"
+typing-extensions = "^4.7.1"
+tzdata = "^2023.3"
+tzlocal = ">=1.1,<5"
+urllib3 = "<2"
+validators = "^0.22.0"
+watchdog = "^3.0.0"
+wrapt = "^1.15.0"
+yarl = "^1.9.2"
+zipp = "^3.16.2"
+elasticsearch = "^8.9.0"
+
+[tool.poetry.dev-dependencies]
+ipython = "^8.0.0"
+jupyter = "^1.0.0"
+pytest = "^6.2.5"
+tox = "^3.25.1"
+flake8 = "^4.0.1"
+isort = "^5.10.1"
+black = { version = "^22.6.0", allow-prereleases = true }
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+# make it compatible with black
+profile = "black"
+
+[tool.poetry.scripts]
+chat-with-your-data = 'chat_with_your_data.main:main'
